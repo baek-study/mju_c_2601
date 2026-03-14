@@ -5,7 +5,17 @@ C 언어 프로그래밍
 
 ## [1주차 강의&nbsp;-&nbsp;C 언어 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 
+### [C 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
+<ul>
+<li><b>특징:</b> 컴파일러 방식, 현대 프로그래밍 언어의 기반, 임베디드에 탁월 </li>
+<li><b>통합 개발 환경:</b> Dev C++, Visual Studio, VS code 등 </li>  
+</ul>
 
+### [실습 환경 세팅 (Dev C++)](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
+<ul>
+<li>코드작성, 컴파일, 실행을 한 번에 처리 </li>
+<li>프로젝트생성-소스코드작성-컴파일(f9)-실행(f10)<li>  
+</ul>
 
 ### [첫 프로그램! hello, world](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 // C 프로그램 : Hello World <br> 
