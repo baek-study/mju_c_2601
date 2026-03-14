@@ -14,15 +14,15 @@ C 언어 프로그래밍
 ### [실습 환경 세팅 (Dev C++)](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
 <li>코드작성, 컴파일, 실행을 한 번에 처리 </li>
-<li>프로젝트생성-소스코드작성-컴파일(f9)-실행(f10)</li>  
+<li>프로젝트생성-소스코드작성-컴파일(f9)-실행(f10)-컴파일 후 실행(F11)</li>  
 </ul>
 
 ### [첫 프로그램! hello, world](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
-// C 프로그램 : Hello World <br> 
+// C 프로그램 : Hello, World <br> 
 #include <stdio.h><br>
 int main() <br>
 {<br>
-  &emsp;&emsp;printf("Hello, World");<br>
+  &emsp;&emsp;printf("Hello, World\n");<br>
   &emsp;&emsp;return 0;<br>
 }<br>
 <br>
