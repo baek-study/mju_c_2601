@@ -3,7 +3,7 @@ C 언어 프로그래밍
 
 <hr size = "10px", width ="500px">
 
-## 3주차 실습 - 변수
+## 3주차 실습 - 변수와 표준출력
 ### [변수개념과 자료형]()
 <ul>
   <li><b>변수</b> : 데이터를 저장하는 공간 </li>
@@ -77,16 +77,18 @@ int main() <br>
 </ul>
 
 ### [C 프로그램 구성요소]()
-//1. 주석 : 프로그램 설명글<br> 
+<ul>
+<li>//1. 주석 : 프로그램 설명글</li>
 // C 프로그램 : Hello World    <br> 
-//2. 전처리기 : 필요한도구 가져오기 <br> 
+<li>//2. 전처리기 : 필요한도구 가져오기</li>
 #include <stdio.h><br>
-//3. main 함수 -{ } 코드 울타리 <br> 
+<li>//3. main 함수 -{ } 코드 울타리 </li>
 int main() <br>
 { &emsp; //함수시작 <br> 
   &emsp;&emsp;printf("Hello, World\n");<br>
   &emsp;&emsp;return 0;<br>
 } &emsp; //함수끝 <br>
+</ul>
 
 ### [표준출력함수 printf()]()
 <ul>
