@@ -78,11 +78,11 @@ int main() <br>
 
 ### [C 프로그램 구성요소]()
 <ul>
-<li>1. <b>주석</b> : 프로그램 설명글</li>
+<li><b>주석</b> : 프로그램 설명글</li>
 // C 프로그램 : Hello World    <br> 
-<li>2.<b></b> 전처리기</b> : 필요한도구 가져오기</li>
+<li><b>전처리기</b> : 필요한도구 가져오기</li>
 #include <stdio.h><br>
-<li>3.<b> main 함수</b> -{ } 코드 울타리 </li>
+<li><b> main 함수</b> -{ } 코드 울타리 </li>
 int main() <br>
 { &emsp; //함수시작 <br> 
   &emsp;&emsp;printf("Hello World\n");<br>
