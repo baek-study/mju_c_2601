@@ -3,7 +3,7 @@ C 언어 프로그래밍
 
 <hr size = "10px", width ="500px">
 
-## 3주차 실습 - 변수와 표준출력
+## [📦3주차 실습 - 변수와 표준출력]()
 ### [변수개념과 자료형]()
 <ul>
   <li><b>변수</b> : 데이터를 저장하는 공간 </li>
@@ -43,7 +43,7 @@ C 언어 프로그래밍
 <br>
 
 
-## [1주차 강의&nbsp;-&nbsp;C 언어 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
+## [🔵1주차 강의&nbsp;-&nbsp;C 언어 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 
 ### [C 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
@@ -76,7 +76,7 @@ int main() <br>
   <li>순서도: 알고리즘을 표준화된 기호로 표현 </li>
 </ul>
 
-### [C 프로그램 구성요소]()
+### [🛠️C 프로그램 구성요소]()
 <ul>
 <li><b>주석</b> : 프로그램 설명글</li>
 // C 프로그램 : Hello World    <br> 
