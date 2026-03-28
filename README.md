@@ -23,8 +23,9 @@ C 언어 프로그래밍
   <li>변수 초기화 : int num=10;&ensp; char ch='a';&ensp; double pi=3.14;</li>
 </ul>
 
-### [상수]()
+### [상수(Constant)]()
 <ul>
+  <li> 값이 변할수 없는 데이터 </li>
   <li> <b>const</b> double PI = 3.14; </li>
   <li> <b>#define</b> PI 3.14 // =, ; 없음 </li>
 </ul>
