@@ -4,7 +4,7 @@ C 언어 프로그래밍
 <hr size = "10px", width ="500px">
 
 ## [📦3주차 실습 - 변수와 표준출력]()
-### [변수개념과 자료형]()
+### [🔹변수개념과 자료형]()
 <ul>
   <li><b>변수</b> : 데이터를 저장하는 공간 </li>
   <li>이름 규칙 : 알파벳, 숫자, 밑줄(_)로 구성 <br>
@@ -14,7 +14,7 @@ C 언어 프로그래밍
     </li> 
 </ul>
 
-### [C 프로그램의 변수선언/사용]()
+### [🔹C 프로그램의 변수선언/사용]()
 <ul>
   <li>변수 선언 :  int num;&ensp; char ch;&ensp; double pi;&ensp; <br>
    &emsp;=>  int(정수), char(문자), double(실수) 
@@ -23,7 +23,7 @@ C 언어 프로그래밍
   <li>변수 초기화 : int num=10;&ensp; char ch='a';&ensp; double pi=3.14;</li>
 </ul>
 
-### [상수(Constant)]()
+### [🔹상수(Constant)]()
 <ul>
   <li> 값이 변할수 없는 데이터 </li>
   <li> <b>const</b> double PI = 3.14; </li>
