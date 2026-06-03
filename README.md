@@ -33,7 +33,7 @@ int main() <br>
 <br>
 
 ## [🛠️2주차 강의&nbsp;-&nbsp;C 프로그램 구성 요소]()
-
+---
 ### [🔹 프로그램 개발과정 및 알고리즘]()
 <ul>
   <li>요구분석→설계→구현→테스트</li>
@@ -64,7 +64,8 @@ int main() <br>
 <br>
 
 ## [📦3주차 강의&nbsp;-&nbsp;변수](https://github.com/baek-study/mju_c_2601/blob/main/source/week3_exam.c)
-### [변수(https://github.com/baek-study/mju_c_2601/blob/main/source/week3_exam.c)
+---
+### [변수](https://github.com/baek-study/mju_c_2601/blob/main/source/week3_exam.c)
 <ul>
   <li>변수 선언 :  int num;&ensp; char ch;&ensp; double pi;&ensp; <br>
    &emsp;=>  int(정수), char(문자), double(실수) 
