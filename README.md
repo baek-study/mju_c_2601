@@ -2,6 +2,8 @@
 C 언어 수업시간의 요약 및 코드 배포를 위한 학습 공간입니다. 
 
 <hr size = "10px", width ="500px">
+<br>
+<br>
 
 ## [🔵1주차 강의&nbsp;-&nbsp;C 언어 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 ---
