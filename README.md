@@ -34,16 +34,16 @@ int main() <br>
 <br>
 <br>
 
-## [🛠️2주차 강의&nbsp;-&nbsp;C 프로그램 구성 요소]()
+## [🛠️2주차 강의&nbsp;-&nbsp;C 프로그램 구성 요소](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 ---
-### [🔹 프로그램 개발과정 및 알고리즘]()
+### [🔹 프로그램 개발과정 및 알고리즘](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
   <li>요구분석→설계→구현→테스트</li>
   <li>알고리즘: 설계로 문제를 해결하는 절차</li>
   <li>순서도: 알고리즘을 표준화된 기호로 표현 </li>
 </ul>
 
-### [🔹 C 프로그램 구성요소]()
+### [🔹 C 프로그램 구성요소](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
 <li><b>주석</b> : 프로그램 설명글</li>
 // C 프로그램 : Hello World    <br> 
@@ -57,7 +57,7 @@ int main() <br>
 } &emsp; //함수끝 <br>
 </ul>
 
-### [🔹 표준출력함수 printf()]()
+### [🔹 표준출력함수 printf()](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
   <li>printf("Hello World\n"); </li>
   <li>출력제어: printf("탭키 \t 줄바꿈 \n ");(</li>
