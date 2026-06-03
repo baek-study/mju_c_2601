@@ -1,0 +1,264 @@
+//1. 주석 
+/*
+	강  좌 :  
+	파일명: week4_exam.c
+	설  명: 4주차 연산자 실습
+	작성자: 
+*/
+
+//2. 전처리기
+#include <stdio.h>
+#include <stdlib.h>
+
+void exam1_input();       //입력 함수 기본 포맷 연습 - 정수 %d, 문자 %c 
+void exam2_input();       //입력 함수 기본 포맷 연습 - 실수 float %f,  double %lf
+void exam3_input();       //입력 함수 갯수, 타입 일치
+void exam4_arithmetic();  //산술 연산(+,-,*,/) 연습 -  실수 이용 
+void exam5_modulus();     //몫(/), 나머지(%) 연습
+void exam6_compound();    // 복합대입 연산자
+void exam7_Incremental(); // 증감 연산자 연습 
+void exam8_bitwise();     // 비트 연산자 연습 
+void do_mission1();       // 미션
+
+//3. main 함수
+int main()
+{
+	//system("chcp 65001");   // change code page(table)  utf-8 (65001)
+	printf("\n");
+	printf("hello world! 테스트\n");
+	
+	int choice;
+
+    // 사용자에게 입력 받기
+    printf("실행할 함수 번호를 입력하세요 (1 ~ 9): ");
+    scanf("%d", &choice);
+
+    // switch-case 문을 활용한 분기 처리
+    switch(choice) 
+    {
+        case 1:
+            exam1_input();
+            break;
+        case 2:
+            exam2_input();
+            break;
+        case 3:
+            exam3_input();
+            break;
+        case 4:
+            exam4_arithmetic();
+            break;
+        case 5:
+            exam5_modulus();
+            break;
+        case 6:
+            exam6_compound();
+            break;
+        case 7:
+            exam7_Incremental();
+            break;
+        case 8:
+            exam8_bitwise();
+            break;
+        case 9:
+            do_mission1();
+            break;
+        default:
+            printf("잘못된 입력입니다. 1에서 9 사이의 번호를 입력해주세요.\n");
+            break;
+    }
+    
+    return 0;
+}
+
+//입력 함수 기본 포맷 연습 - 정수 %d, 문자 %c 
+void exam1_input()
+{
+	//7. 안내메시지 추가!!!
+	printf("정수를 입력하세요: ");
+	
+	//1. 변수 선언 - 정수 num
+	int num;
+	//2. 입력  함수 이용 - 형식지정자  %d (정수) , 주소연산자 &	
+	scanf("%d", &num);
+	//3. num 출력
+    printf("입력된 정수: %d\n", num);
+
+    printf("문자를 입력하세요: ");
+	//4. 변수 선언 - 문자  ch
+	char ch;
+	//5. 입력  함수 이용 - 형식지정자  %c (문자) , 주소연산자 &	
+	scanf(" %c", &ch);
+	//6. ch 출력
+	printf("입력된 문자: %c\n", ch);
+}
+
+//입력 함수 기본 포맷 연습 - 실수 float %f,  double %lf
+void exam2_input()
+{
+    printf("float 실수를 입력하세요: ");
+	//1. 변수 선언 - 실수 ratio,     - float 
+	float ratio;
+	//2. 입력  함수 이용 - 형식지정자  %f (실수-float) 	, 주소연산자 &	
+	scanf("%f", &ratio);
+	//3. ratio 출력
+    printf("입력된 float: %f\n", ratio);
+
+    printf("double 실수를 입력하세요: ");
+	//4. 변수 선언 - 실수 scale      - double     
+	double scale;
+	//5. 입력  함수 이용 - 형식지정자  %lf (실수-double) , 주소연산자 &	
+	scanf("%lf", &scale);
+	//6. scale 출력
+    printf("입력된 double: %lf\n", scale);
+}
+
+//입력 함수 갯수, 타입 일치
+void exam3_input()
+{
+	//1. 변수 선언 - 정수 x, y 
+    int x, y;
+	
+	//2. 안내메시지를 출력 - 두 개의 정수를 입력하시오:
+	printf("두 개의 정수를 입력하시오: ");
+	//3. 정수 입력 - 정수시 %d,  주소 연산자 & 사용    
+	scanf("%d %d", &x, &y);
+	//4. 정수 출력  - 첫번째 정수: 00, 두번째 정수 : 00
+    printf("첫번째 정수: %d, 두번째 정수: %d\n", x, y);
+}
+
+//산술 연산(+,-,*,/) 연습 -  실수 이용 
+void exam4_arithmetic() 
+{
+	//1. 변수 선언 - 실수(double)  x, y, result
+	double x, y, result;
+	
+	//2. 안내메시지 출력 -두 개의 실수를 입력하시오 :
+	printf("두 개의 실수를 입력하시오 : ");
+	
+	//3. 사용자 입력 - x, y 
+	scanf("%lf %lf", &x, &y);
+	
+	//4. + 연산자 수행 후 result에
+	result = x + y;
+	//5. result 출력 - 00 + 00 = 00 형식으로  
+    printf("%.2lf + %.2lf = %.2lf\n", x, y, result);
+
+	//6. - 연산자 수행 후 result에
+	result = x - y;
+	//7. result 출력 - 00 - 00 = 00 형식으로  
+    printf("%.2lf - %.2lf = %.2lf\n", x, y, result);
+
+	//8. * 연산자 수행 후 result에
+	result = x * y;
+	//9. result 출력 - 00 * 00 = 00 형식으로  
+    printf("%.2lf * %.2lf = %.2lf\n", x, y, result);
+
+	//10. / 연산자 수행 후 result에
+	result = x / y;
+	//11. result 출력 - 00 / 00 = 00 형식으로  
+    printf("%.2lf / %.2lf = %.2lf\n", x, y, result);
+}
+
+//몫(/), 나머지(%) 연습
+void exam5_modulus() 
+{
+	//1. 기호상수 선언 - 정수  SEC_PER_MINUTE - 60
+    const int SEC_PER_MINUTE = 60;
+	//2. 변수 선언 - 정수 분(minute), 초(second), totalSec(전체총합)
+    int minute, second, totalSec;
+	//3. 입력 안내메시지 출력 - 초를 입력하시오 :
+    printf("초를 입력하시오 : ");
+	//4. 사용자 입력 - second 입력
+    scanf("%d", &totalSec);
+
+	//5. 계산 - 분, 초 계산
+    //5.1 분은 몫을 이용
+    minute = totalSec / SEC_PER_MINUTE;
+	//5.2 초는 나머지를 이용
+	second = totalSec % SEC_PER_MINUTE;
+	
+	//6. 출력 - 00초는 00분 00초입니다 - 형식지정자 3개 - 변수 3개
+    printf("%d초는 %d분 %d초입니다.\n", totalSec, minute, second);
+}
+
+// 복합대입 연산자
+void exam6_compound()
+{
+	//1. 변수 초기화 - 정수,x, y, z -> 10, 10, 33 
+    int x = 10, y = 10, z = 33;
+
+	//2. 복합 대입 연산자 연습 
+	//2.1 x에 1을 더해서 자기자신으로
+    x += 1;
+	//2.2 y에 2를 곱해서 자기자신으로
+    y *= 2;
+	//2.3 z를 10으로 나누어서 나머지를 자기자신으로
+    z %= 10;
+
+	//3. x,y, z 값 출력  ; x = 11   y = 20   z = 3
+    printf("x = %d, y = %d, z = %d\n", x, y, z);
+}
+
+// 증감 연산자 예제 1
+void exam7_Incremental()
+{
+	//1. 변수 정의 - 정수 x y...
+	int x, y;
+    
+	//////////////////////전위증가    
+	//2. 변수 값 저장 x에 10 넣음
+	x = 10;
+	//3. x에 전위 증가를 한 후 y 에 넣음
+	y = ++x;
+	//4. x와 y 출력
+	printf("전위증가: x=%d, y=%d\n", x, y);
+    
+	//////////////////////후위증가
+	//5. 변수 값 저장 x에 (다시) 10 넣음
+	x = 10;
+	//6. x에 후위 증가를 한 후 y 에 넣음
+	y = x++;
+	//7. x와 y 출력
+    printf("후위증가: x=%d, y=%d\n", x, y);
+}
+
+// 비트 연산자 예제 1
+void exam8_bitwise()
+{
+	// 4를 왼쪽으로  시프트 1개 한 값의 정수 결과 출력
+	printf("4 << 1 = %d\n", 4 << 1);
+	// 4를 오른쪽으로 시프트 1개 한 값의 정수  결과 출력
+	printf("4 >> 1 = %d\n", 4 >> 1);
+}
+
+//미션1 : 나만의 성적표 계산기 만들기 
+void do_mission1()
+{
+	//1. 변수선언  - 문자 initial, 정수 kor_score, c_score, diff, 실수 last_average, average
+	char initial;
+    int kor_score, c_score, diff;
+    float last_average, average;
+    
+	//2. 이니셜 입력
+	printf("영문 이니셜을 입력하세요: ");
+    scanf(" %c", &initial);
+	//3. 국어 점수 입력
+	printf("국어 점수를 입력하세요: ");
+    scanf("%d", &kor_score);
+	//4.C 언어 점수 입력
+	printf("C 언어 점수를 입력하세요: ");
+    scanf("%d", &c_score);
+	//5. 지난학기 평균 입력
+	printf("지난 학기 평균을 입력하세요: ");
+    scanf("%f", &last_average);
+    
+	//6. 계산 - average, diff
+	average = (kor_score + c_score) / 2.0f;
+    diff = average - last_average;
+    
+	//7. 출력1 -K 학생의 국어 점수는 80, 씨언어 점수는 100 입니다.
+    printf("\n%c 학생의 국어 점수는 %d, C언어 점수는 %d 입니다.\n", initial, kor_score, c_score);
+    //8. 출력1 -평균은 90.0 이고, 지난 학기와 차이는 -2.5 입니다.
+	printf("평균은 %.1f 이고, 지난 학기와의 차이는 %d 입니다.\n", average, diff);
+}

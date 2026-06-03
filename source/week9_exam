@@ -1,0 +1,305 @@
+/*
+	파일명: week9_exam.c
+	설  명: 9주차 다중 반복문과 while문
+	작성자: 
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void exam1_nest_for();
+void exam2_nest_for();
+void exam3_nest_for();
+void exam4_while();
+void exam5_while();
+void exam6_while();
+void exam7_while_menu();
+void exam8_while_menu();
+void do_mission1();
+void do_mission2();
+
+int main()
+{
+	printf("\n==== 제 9 강 : 반복문-while ===== \n");
+	
+	int choice;
+
+    printf("실행할 함수 번호를 입력하세요 (1 ~ 10): ");
+    scanf("%d", &choice);
+
+    switch(choice) 
+	{
+        case 1: 
+            exam1_nest_for(); 
+            break;
+        case 2: 
+            exam2_nest_for(); 
+            break;
+        case 3: 
+            exam3_nest_for(); 
+            break;
+        case 4: 
+            exam4_while(); 
+            break;
+        case 5: 
+            exam5_while(); 
+            break;
+        case 6: 
+            exam6_while(); 
+            break;
+        case 7: 
+            exam7_while_menu(); 
+            break;
+        case 8: 
+            exam8_while_menu(); 
+            break;
+        case 9: 
+            do_mission1(); 
+            break;
+        case 10: 
+            do_mission2(); 
+            break;			            
+        default:
+            printf("잘못된 입력입니다. 1에서 10 사이의 번호를 입력해주세요.\n");
+            break;
+    }
+    return 0;
+}
+
+void exam1_nest_for()
+{
+	int i, j;
+	
+	for(i = 0; i < 5; i++) 
+    {
+	    for(j = 0; j < 5; j++) 
+        {
+			printf("hello world! ");
+		}
+		printf("\n");
+	}
+}
+
+void exam2_nest_for()
+{
+	int x, y;
+	
+	for(x = 0; x < 5; x++) 
+    {
+	    for(y = 0; y < 10; y++) 
+        {
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+
+void exam3_nest_for()
+{
+	int dan, j;
+	 
+	for(dan = 2; dan <= 9; dan++) 
+    {
+		printf("--- %d단 ---\n", dan);
+	    for(j = 1; j <= 9; j++) 
+        {
+			printf("%d * %d = %d\n", dan, j, dan * j);
+		}
+		printf("\n");
+	}
+} 
+
+void exam4_while()
+{ 
+	int i = 0;
+	 
+	while(i < 5) 
+    {
+		printf("hello world!\n");
+		i++;
+	}
+}
+
+void exam5_while()
+{
+	int dan, i;
+	
+	printf("구구단 중에서 출력하고 싶은 단을 입력하시오: ");
+	scanf("%d", &dan);
+	
+	i = 1;
+	while(i <= 9) 
+    {
+		printf("%d * %d = %d\n", dan, i, dan * i);
+		i++;
+	}
+}
+
+void exam6_while()
+{
+	int i, n, sum;
+	
+	printf("정수를 입력하시오: ");
+	scanf("%d", &n);
+	
+	i = 0;
+	sum = 0;
+	
+	while(i <= n) 
+    {
+		if(i % 2 != 0) 
+        {
+			sum += i;
+		}
+		i++;
+	}
+	
+	printf("0부터 %d까지 홀수의 합: %d\n", n, sum);
+}
+
+void exam7_while_menu()
+{
+	int num;
+	int count = 0;
+		
+	while(1) 
+    {
+		printf("숫자를 입력(0은 종료): ");
+		scanf("%d", &num);
+		
+		if (num == 0) 
+        {
+			printf("종료합니다. 총 %d번 입력했습니다.\n", count);
+			break;
+		}
+		count++;
+	}
+}
+
+void exam8_while_menu()
+{
+	int menu;
+		
+	while(1) 
+    {
+		printf("\n[메인 메뉴]");
+	    printf("\n1. 음식 주문");
+	    printf("\n2. 음식 계산");
+	    printf("\n3. 종료");
+		printf("\n메뉴를 입력: ");
+	    scanf("%d", &menu);
+	    
+	    if (menu == 1) 
+        {
+			printf("음식을 주문합니다.\n");
+		} 
+        else if (menu == 2) 
+        {
+			printf("음식값을 계산합니다.\n");
+		} 
+        else if (menu == 3) 
+        {
+			printf("프로그램을 종료합니다.\n");
+			break;
+		} 
+        else 
+        {
+			printf("잘못된 메뉴 번호입니다.\n");
+		}
+	}
+}
+
+void do_mission1() 
+{
+	int choice;
+	
+	while(1) 
+    {
+		printf("\n=== 마법 상점 ===\n");
+		printf("1. 체력 포션 구매\n");
+		printf("2. 마나 포션 구매\n");
+		printf("0. 상점 나가기\n");
+		printf("메뉴를 선택하세요: ");
+		scanf("%d", &choice);
+		
+		if(choice == 1) 
+        {
+			printf("[구매 완료] 체력 포션을 구매했습니다.\n");
+		} 
+        else if(choice == 2) 
+        {
+			printf("[구매 완료] 마나 포션을 구매했습니다.\n");
+		} 
+        else if(choice == 0) 
+        {
+			printf("상점을 나갑니다.\n");
+			break;
+		} 
+        else 
+        {
+			printf("[오류] 잘못된 메뉴 번호.\n");
+		}
+	}
+}
+
+void do_mission2() 
+{
+	int choice;
+	int my_potion = 0;
+	
+	while(1) 
+    {
+		printf("\n=== 마법 상점(인벤토리) ===\n");
+		printf("1. 체력 포션 구매\n");
+		printf("2. 마나 포션 구매\n");
+		printf("3. 내 가방 확인하기\n");
+		printf("0. 상점 나가기\n");
+		printf("메뉴를 선택하세요: ");
+		scanf("%d", &choice);
+		
+		if(choice == 1 || choice == 2) 
+        {
+			if(my_potion >= 9) 
+            {
+				printf("[구매 불가] 가방이 꽉 찼습니다!\n");
+			} 
+            else 
+            {
+				printf("[구매 완료] 포션을 구매했습니다.\n");
+				my_potion++;
+			}
+		} 
+        else if(choice == 3) 
+        {
+			int r, c;
+			int count = 0;
+			printf("\n--- 인벤토리 상태 ---\n");
+			for(r = 0; r < 3; r++) 
+            {
+				for(c = 0; c < 3; c++) 
+                {
+					if(count < my_potion) 
+                    {
+						printf("♥ ");
+					} 
+                    else 
+                    {
+						printf("♡ ");
+					}
+					count++;
+				}
+				printf("\n");
+			}
+			printf("---------------------\n");
+		} 
+        else if(choice == 0) 
+        {
+			printf("상점을 나갑니다.\n");
+			break;
+		} 
+        else 
+        {
+			printf("[오류] 잘못된 메뉴 번호.\n");
+		}
+	}
+}

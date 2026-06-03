@@ -1,0 +1,257 @@
+//1. 주석 
+/*
+	강  좌 :  
+	파일명: week7_exam.c
+	설  명: 7주차 반복문(for) 실습
+	작성자: 
+*/
+
+//2. 전처리기
+#include <stdio.h>
+#include <stdlib.h>
+
+void exam1_for();         
+void exam2_for();         
+void exam3_for();         
+void exam4_for();         
+void exam5_break();       
+void exam6_continue();    
+void do_mission1();       
+void do_challenge();      
+
+//3. main 함수
+int main()
+{
+	//system("chcp 65001");   // change code page(table)  utf-8 (65001)
+	printf("\n");
+	printf("hello world! 테스트\n");
+	
+	int choice;
+
+    // 사용자에게 입력 받기
+    printf("실행할 함수 번호를 입력하세요 (1 ~ 8): ");
+    scanf("%d", &choice);
+
+    // switch-case 문을 활용한 분기 처리
+    switch(choice) 
+    {
+        case 1:
+            exam1_for(); 
+            break;
+        case 2:
+            exam2_for();  
+            break;
+        case 3:
+            exam3_for(); 
+            break;
+        case 4:
+            exam4_for();  
+            break;
+        case 5:
+            exam5_break();
+            break;
+        case 6:
+            exam6_continue(); 
+            break;
+        case 7:
+            do_mission1(); 
+            break;
+        case 8:
+            do_challenge();   
+            break;            
+        default:
+            printf("잘못된 입력입니다. 1에서 8 사이의 번호를 입력해주세요.\n");
+            break;
+    }
+    
+    return 0;
+}
+ 
+// 횟수 반복: for - 5번 hello 출력
+void exam1_for()
+{
+	int i;
+	
+	for (i = 0; i < 5; i++)
+    {
+        printf("hello world!\n");
+    }
+}
+
+// 횟수 반복: for - 1~10 까지 합출력
+void exam2_for()
+{
+	int i, sum;
+	 
+	sum = 0;
+	
+	for (i = 1; i <= 10; i++)
+    {
+        sum = sum + i;
+    }
+    
+    printf("1부터 10까지의 합: %d\n", sum);
+}
+
+//다양한 증감 수식 1 - 필수로 알아 둘것 
+void exam3_for()
+{
+	int i;
+	
+	//경우1) 증감식에서 뺄셈사용
+    printf("뺄셈 감소: ");
+	for (i = 10; i > 0; i--)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+	
+	//경우2) 증감식에서 2씩 증가
+    printf("2씩 증가: ");
+	for (i = 0; i < 10; i += 2)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+	
+	//경우3) 증감식에서 2 곱하기 
+    printf("2 곱하기: ");
+	for (i = 1; i < 20; i *= 2)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+	
+	//경우4) 증감시에서 어떤 수식도 가능 
+    printf("복합 수식: ");
+	for (i = 0; i < 100; i = i * 2 + 1)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+} 
+
+//다양한 증감 수식 2 - 옵션 
+void exam4_for()
+{ 
+	int i, k, sum;
+	 
+	//경우1) for에 초기, 반복조건, 증감 없을때 - 무한 반복 (주석처리)
+	// for (;;) { printf("무한반복\n"); break; }
+	
+	//경우2) 초기값  없을 때
+    i = 0;
+	for (; i < 5; i++)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+	
+	//경우3) 2개 이상 변수 초기화 
+	for (i = 0, k = 10; i < 5; i++, k--)
+    {
+        printf("i=%d k=%d  ", i, k);
+    }
+    printf("\n");
+	
+	//경우4) 대입 뿐 아니라, 수식, 함수도 가능 (예제)
+	// for (i = 0; i < 5; printf("증감위치\n"), i++);
+	
+	//경우5) 반복 조건에 복잡한 수식도 가능
+    sum = 0;
+	for (i = 1; sum < 50; i++)
+    {
+        sum += i;
+    }
+    printf("합이 50을 넘는 시점의 sum: %d\n", sum);
+}
+
+// 반복문 제어 - break - 반복문 탈출
+void exam5_break()
+{
+	printf("[사건 수사] 용의자 10명을 차례로 신문합니다.\n\n");
+	int i;
+	
+	for (i = 1; i <= 10; i++)
+    {
+        printf("%d번 용의자 신문 중...\n", i);
+        if (i == 4)
+        {
+            printf("진범 발견! %d번 용의자를 체포하고 수사를 종료합니다.\n", i);
+            break;
+        }
+    }
+}
+
+// 반복문 제어 - continue - 반복문 건너뛰기
+void exam6_continue()
+{
+	printf("[전수 조사] 현장 근처의 5명을 모두 조사해야 합니다.\n\n");
+	int i;
+	
+	for (i = 1; i <= 5; i++)
+    {
+        if (i == 3)
+        {
+            printf("%d번 사람은 알리바이가 확인되어 조사 건너뜀.\n", i);
+            continue;
+        }
+        printf("%d번 사람 조사 완료.\n", i);
+    }
+}
+
+// do mission 1 - 공배수 탐색기 
+void do_mission1() 
+{
+    int num1, num2, i;
+    
+    printf("두 정수를 입력하세요: ");
+    scanf("%d %d", &num1, &num2);
+    
+    for (i = 1; i <= 100; i++)
+    {
+        if (i % num1 == 0 && i % num2 == 0)
+        {
+            if (i < 50)
+            {
+                continue;
+            }
+            if (i > 90)
+            {
+                printf("탐색 범위를 초과 했습니다.\n");
+                break;
+            }
+            printf("공배수 발견: %d\n", i);
+        }
+    }
+}
+
+// 왕국 수사대 : 진범 용 검거 시스템  
+void do_challenge()
+{
+    int total, alibi, criminal, i;
+    
+    printf("총 수색할 동굴 수를 입력하세요: ");
+    scanf("%d", &total);
+    printf("알리바이가 확인된 용 번호를 입력하세요: ");
+    scanf("%d", &alibi);
+    printf("진범 용 번호를 입력하세요: ");
+    scanf("%d", &criminal);
+    
+    for (i = 1; i <= total; i++)
+    {
+        if (i == alibi)
+        {
+            printf("%d번 동굴: 알리바이 확인. 수사 건너뜀.\n", i);
+            continue;
+        }
+        
+        printf("%d번 동굴 수색 중...\n", i);
+        
+        if (i == criminal)
+        {
+            printf("%d번 동굴에서 진범 용 발견! 검거 완료. 수사를 종료합니다.\n", i);
+            break;
+        }
+    }
+}

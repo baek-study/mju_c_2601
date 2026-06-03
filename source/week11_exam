@@ -1,0 +1,272 @@
+/*
+	파일명: week11_exam.c
+	설  명: 11주차 변수의 유효 범위 및 라이브러리 함수
+	작성자: 
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+void do_function1();
+void do_function2();
+void do_exam_var1();
+void do_exam_var2();
+void do_exam_var3();
+void do_exam_var4();
+void do_exam_var5();
+void do_exam_var6();
+void do_exam_var7();
+void do_exam_rand1();
+void do_exam_rand2();
+void do_exam_math();
+void do_mission();
+
+int global_x = 123;
+int gi = 0;
+int global_counter = 0;
+int sum = 1;
+int total_balance = 10000;
+
+int main()
+{
+	printf("\n11주차 실습수업 \n\n");
+	
+	int choice;
+    printf("실행할 함수 번호를 입력하세요 (1 ~ 13): ");
+    scanf("%d", &choice);
+
+    switch(choice) 
+    {
+        case 1: 
+            do_function1(); 
+            break;
+        case 2: 
+            do_function2(); 
+            break;
+        case 3: 
+            do_exam_var1(); 
+            break;
+        case 4: 
+            do_exam_var2(); 
+            break;
+        case 5: 
+            do_exam_var3(); 
+            break;
+        case 6: 
+            do_exam_var4(); 
+            break;
+        case 7: 
+            do_exam_var5(); 
+            break;
+        case 8: 
+            do_exam_var6(); 
+            break;
+        case 9: 
+            do_exam_var7(); 
+            break;
+        case 10: 
+            do_exam_rand1(); 
+            break;
+        case 11: 
+            do_exam_rand2(); 
+            break;
+        case 12: 
+            do_exam_math(); 
+            break;
+        case 13: 
+            do_mission(); 
+            break;            
+        default:
+            printf("잘못된 입력입니다. 1에서 13 사이의 번호를 입력해주세요.\n");
+            break;
+    }
+    return 0;
+}
+
+void print_stars() 
+{
+	int i; 
+    for(i=0; i<30; i++) 
+    {
+        printf("*");
+    }
+    printf("\n");
+}
+
+void print_stars_num(int num) 
+{
+	int i; 
+    for(i=0; i<num; i++) 
+    {
+        printf("*");
+    }
+    printf("\n");
+}
+
+int max(int x, int y) 
+{ 
+    if (x > y)
+    {
+        return x;
+    }
+    else
+    {
+        return y;
+    }
+}
+
+int get_sum(int x, int y) 
+{ 
+    return x + y; 
+}
+
+void do_function1()
+{
+	printf("정의한 함수 호출 \n");
+	print_stars();
+	print_stars_num(10);
+	printf("최대값: %d\n", max(10, 20));
+	printf("합계: %d\n", get_sum(50, 30));
+}
+
+void do_function2()
+{
+	printf("ATM 시스템이 준비중입니다.\n");
+}
+
+void do_exam_var1()
+{
+ 	int i;
+    for(i=0; i<4; i++) 
+    {
+        int temp = 1; 
+		printf("temp: %d\n", temp);
+		temp++; 
+	}
+}
+
+void sub1() 
+{ 
+    global_x = 456; 
+}
+
+void sub2() 
+{ 
+    global_x = 789; 
+}
+
+void do_exam_var2()
+{
+	printf("전역변수 초기: %d\n", global_x);
+	sub1();
+	printf("sub1 호출 후: %d\n", global_x);
+	sub2();
+	printf("sub2 호출 후: %d\n", global_x);
+}
+
+void print_sharp()
+{	
+	for(gi = 0; gi < 10; gi++) 
+    {
+		printf("#");
+	}
+	printf("\n");
+}
+
+void do_exam_var3()
+{
+	printf("주의: 전역변수 루프 인덱스 덮어쓰기 예제입니다.\n");
+	print_sharp();
+}
+
+void do_exam_var4()
+{
+	printf("초기화되지 않은 전역 변수 global_counter: %d\n", global_counter);
+}
+
+void do_exam_var5()
+{
+	int sum = 20; 
+	printf("전역변수보다 지역변수 우선: sum = %d\n", sum); 	
+}
+
+void auto_sub()
+{
+	auto int counter = 0;
+	counter++;
+	printf("auto counter = %d\n", counter);
+}
+
+void do_exam_var6()
+{
+	int i;	
+	for(i=0; i<=2; i++) 
+    {
+		auto_sub();
+	}
+}
+
+void static_sub()
+{
+	static int counter = 0;
+	counter++;
+	printf("static counter = %d\n", counter);
+}
+
+void do_exam_var7()
+{
+	int i;	
+	for(i=0; i<=2; i++) 
+    {
+		static_sub();
+	}
+}
+
+void do_exam_rand1()
+{
+	int i;
+	printf("기본 rand(): ");
+	for(i=0; i<=3; i++) 
+    {
+		printf("%d ", rand() % 100);
+	}
+	printf("\n");
+}
+
+void do_exam_rand2()
+{
+	int i;
+	srand((unsigned int)time(NULL));
+	printf("srand() 후 rand(): ");
+	for(i=0; i<=3; i++) 
+    {
+		printf("%d ", rand() % 100);
+	}
+	printf("\n");
+}  
+
+void do_exam_math()
+{
+	double base, exp, powValue, number, sqrtValue;
+	
+	printf("밑과 지수를 입력하세요: ");
+	scanf("%lf %lf", &base, &exp);
+	powValue = pow(base, exp);
+	printf("%.2lf의 %.2lf승은 %.2lf입니다.\n", base, exp, powValue);
+	
+	printf("제곱근을 구할 숫자를 입력하세요: ");
+	scanf("%lf", &number);
+	sqrtValue = sqrt(number);
+	printf("%.2lf의 제곱근은 %.2lf입니다.\n", number, sqrtValue);
+}
+
+void do_mission()
+{
+	double rate = 0.05; 
+	double final_balance = total_balance * pow(1 + rate, 5);
+	
+	printf("원금: %d원\n", total_balance);
+	printf("5년 후 복리 계산된 최종 금액: %.2f원\n", final_balance);
+}
