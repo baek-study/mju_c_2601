@@ -1,11 +1,12 @@
 # C 언어 - 월 14:00
 C 언어 수업시간의 요약 및 코드 배포를 위한 학습 공간입니다. 
+<hr size = "10px", width ="500px">
 
 
 <br>
 
 ## [🔵1주차 강의&nbsp;-&nbsp;C 언어 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
----
+ 
 ### [🔹 C 소개](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
 <li><b>특징:</b> 컴파일러 방식, 현대 프로그래밍 언어의 기반, 임베디드에 탁월 </li>
@@ -35,7 +36,7 @@ int main() <br>
 <br>
 
 ## [🛠️2주차 강의&nbsp;-&nbsp;C 프로그램 구성 요소](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
----
+ 
 ### [🔹 프로그램 개발과정 및 알고리즘](https://github.com/baek-study/mju_c_2601/blob/main/source/week1_hello.c)
 <ul>
   <li>요구분석→설계→구현→테스트</li>
@@ -67,7 +68,7 @@ int main() <br>
 <br>
 
 ## [📦3주차 강의&nbsp;-&nbsp;변수](https://github.com/baek-study/mju_c_2601/blob/main/source/week3_exam.c)
----
+ 
 ### [변수](https://github.com/baek-study/mju_c_2601/blob/main/source/week3_exam.c)
 <ul>
   <li>변수 선언 :  int num;&ensp; char ch;&ensp; double pi;&ensp; <br>
@@ -90,7 +91,7 @@ int main() <br>
 <br>
 
 ## [🧮4주차 강의&nbsp;-&nbsp;연산자](https://github.com/baek-study/mju_c_2601/blob/main/source/week4_exam.c)
----
+ 
 ### [표준입력함수 scanf()](https://github.com/baek-study/mju_c_2601/blob/main/source/week4_exam.c)
 <ul>
  <li>형식지정자 :  %d(정수), %c(문자), %lf(double), %f(float) </li>
@@ -119,7 +120,7 @@ int main() <br>
 <br>
 
 ## [🚦5주차 강의&nbsp;-&nbsp;조건문 if](https://github.com/baek-study/mju_c_2601/blob/main/source/week5_exam.c)
----
+ 
 ### [연산자-관계/논리](https://github.com/baek-study/mju_c_2601/blob/main/source/week5_exam.c)
 <ul>
   <li>관계 : ==, !=, >=, <=, >, <  </li>
@@ -137,7 +138,7 @@ int main() <br>
 <br>
 
 ## [🛤️6주차 강의&nbsp;-&nbsp;다중 조건 ](https://github.com/baek-study/mju_c_2601/blob/main/source/week6_exam.c)
----
+ 
 ### [조건문-다중if](https://github.com/baek-study/mju_c_2601/blob/main/source/week6_exam.c)
 <ul>
   <li>중첩 if : if 안에 if <br>
@@ -164,7 +165,7 @@ int main() <br>
 <br>
 
 ## [🔁7주차 강의&nbsp;-&nbsp;반복문-for](https://github.com/baek-study/mju_c_2601/blob/main/source/week7_exam.c)
----
+ 
 ### [반복문-for](https://github.com/baek-study/mju_c_2601/blob/main/source/week7_exam.c)
 <ul>
   <li>for 문 : 횟수반복(ex.10번) <br>
@@ -183,7 +184,7 @@ int main() <br>
 <br>
 
 ## [⏳9주차 강의&nbsp;-&nbsp;반복문-while](https://github.com/baek-study/mju_c_2601/blob/main/source/week9_exam.c) 
----
+ 
 ### [중첩 for](https://github.com/baek-study/mju_c_2601/blob/main/source/week9_exam.c)
 <ul>
   <li>중첩 for 문 : for 안에 for 문 <br>
@@ -212,7 +213,7 @@ int main() <br>
 <br>
 
 ## [🛠️10주차 강의&nbsp;-&nbsp;함수](https://github.com/baek-study/mju_c_2601/blob/main/source/week10_exam.c)
----
+ 
 ### [함수 정의&호출](https://github.com/baek-study/mju_c_2601/blob/main/source/week10_exam.c)
 <ul>
   <li>함수 정의  <br>
@@ -258,7 +259,7 @@ int main() <br>
 <br>
 
 ## [📚11주차 강의&nbsp;-&nbsp;함수 2](https://github.com/baek-study/mju_c_2601/blob/main/source/week11_exam.c)
----
+ 
 ### [변수범위&생존기간](https://github.com/baek-study/mju_c_2601/blob/main/source/week11_exam.c)
 <ul>
   <li>변수속성: 변수 범위, 생존기간 <br>
@@ -303,7 +304,7 @@ int main() <br>
 <br>
 
 ## [🍱12주차 강의&nbsp;-&nbsp;배열](https://github.com/baek-study/mju_c_2601/blob/main/source/week12_exam.c)
----
+ 
 ### [배열](https://github.com/baek-study/mju_c_2601/blob/main/source/week12_exam.c)
 <ul>
   <li>개념: 같은 자료형을 여러개 <br>
@@ -348,7 +349,7 @@ int main() <br>
 <br>
 
 ## [📍13주차 강의&nbsp;-&nbsp;포인터](https://github.com/baek-study/mju_c_2601/blob/main/source/week13_exam.c)
----
+ 
 ### [포인터](https://github.com/baek-study/mju_c_2601/blob/main/source/week13_exam.c)
 <ul>
   <li>개념: 기존 변수의 주소를 가짐 <br>
@@ -387,7 +388,7 @@ int main() <br>
 <br>
 
 ## [🏗️14주차 강의&nbsp;-&nbsp;구조체]()
----
+ 
 ### [배열과함수]()
 <ul>
   <li>함수정의 : 배열(위치), 배열크기 <br>
